@@ -2,5 +2,8 @@
 
 /// Print version information.
 pub fn handle_version() {
-    println!("rumdl {}", env!("CARGO_PKG_VERSION"));
+    println!(
+        "rumdl {} (combined-markdown-formatting-and-code-block-tools branch)",
+        env!("CARGO_PKG_VERSION")
+    );
 }

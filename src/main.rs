@@ -33,8 +33,13 @@ mod resolution;
 mod stdin_processor;
 mod watch;
 
+const VERSION: &str = concat!(
+    env!("CARGO_PKG_VERSION"),
+    " (combined-markdown-formatting-and-code-block-tools branch)"
+);
+
 #[derive(Parser)]
-#[command(author, version, about, long_about = None, arg_required_else_help = true)]
+#[command(author, version = VERSION, about, long_about = None, arg_required_else_help = true)]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
